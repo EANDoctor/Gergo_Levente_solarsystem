@@ -1,0 +1,28 @@
+body {
+    background-image: url("images/background.jpg")
+}
+
+body {
+    font-family:'Times New Roman', Times, serif;
+}
+
+/* táblázat */
+table, tr, td {
+    border: 1px solid rgb(255, 255, 255)
+}
+table {
+    width: 100%;
+}
+table {
+    text-align: center;
+}
+
+/* pozíció */
+h1 {
+    text-align: center;
+}
+
+/* szín */
+h1, table {
+    color: white;
+}
