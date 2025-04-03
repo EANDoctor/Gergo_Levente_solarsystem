@@ -1,4 +1,4 @@
-body {
+html, body {
     background-image: url("images/background.jpg")
 }
 
@@ -25,4 +25,31 @@ h1 {
 /* szín */
 h1, table {
     color: white;
+}
+
+/* planet */
+.circle {
+    width: 200px;
+    height: 200px;
+    background-color: chartreuse;
+    border-radius: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 330px;
+    top: 200px;
+    animation: rotateSelf 3s linear infinite;
+    transform-origin: 50% 0%;
+}
+
+/* planet_rotation */
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
