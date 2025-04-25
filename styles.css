@@ -4,9 +4,13 @@ html, body {
 
 body {
     font-family:'Times New Roman', Times, serif;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
 }
 
 /* táblázat */
+
 table, tr, td {
     border: 1px solid rgb(255, 255, 255)
 }
@@ -18,38 +22,50 @@ table {
 }
 
 /* pozíció */
+
 h1 {
     text-align: center;
 }
 
 /* szín */
+
 h1, table {
     color: white;
 }
 
-/* planet */
-.circle {
-    width: 200px;
-    height: 200px;
-    background-color: chartreuse;
-    border-radius: 40%;
+/* bolygók */
+
+.Nap {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-image: url(images/sun-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+    animation: rotate 30s linear infinite;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+  }
+
+.nap-container {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    left: 330px;
-    top: 200px;
-    animation: rotateSelf 3s linear infinite;
-    transform-origin: 50% 0%;
 }
 
-/* planet_rotation */
+/* bolygó_forgása */
 
-@keyframes spin {
+@keyframes rotate {
     0% {
-        transform: rotate(0deg);
+      transform: rotate(0deg);  /* indulás_0dfok */
     }
     100% {
-        transform: rotate(360deg);
+      transform: rotate(360deg); /* forgás_360fok_ig */
     }
-}
+  }
