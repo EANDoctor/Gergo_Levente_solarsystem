@@ -1,5 +1,5 @@
 html, body {
-    background-image: url("images/background.jpg")
+    background-image: url("images/background.jpg");
 }
 
 body {
@@ -34,6 +34,8 @@ h1, table {
 }
 
 /* bolygók */
+    
+    /* Nap */
 
 .Nap {
     width: 230px;
@@ -59,13 +61,320 @@ h1, table {
     justify-content: center;
 }
 
-/* bolygó_forgása */
+    /* Merkúr */
+
+.Merkúr {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url(images/merkúr-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin:1 100px; /* távolság_a_Naptól */
+}
+
+.merkur-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin:1 100px; 
+    animation: orbit 4s linear infinite; /* forgás_Nap_körül */
+}
+
+    /* Vénusz */
+
+.Vénusz {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(images/vénusz-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 1 150px; /* távolság_a_Naptól */
+}
+
+.venusz-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin:1 150px;
+    animation: orbit-venusz 6s linear infinite;
+}
+
+    /* Föld */
+
+.Föld {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(images/föld-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 1 200px; /* távolság_a_Naptól */
+}
+
+.fold-conteiner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 1 200px;
+    animation: orbit-fold 8s linear infinite; /* forgás_Nap_körül */
+}
+
+    /* Hold */
+
+.Hold {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-image: url(images/hold-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 1 30px; /* távolság_a_Földtől */
+}
+
+.hold-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 1 30px;
+    animation: orbit-hold 3s linear infinite; /* forgás_Nap_körül */
+}
+
+    /* Mars */
+
+.Mars {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-image: url(images/mars-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 1 250px; /* távolság_a_Naptól */
+}
+
+.mars-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 1 250px;
+    animation: orbit-mars 10s linear infinite; /* forgás_Nap_körül */
+}
+
+    /* Jupiter */
+
+.Jupiter {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-image: url(images/jupiter-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 1 320px; /* távolság_a_Naptól */
+}
+
+.jupiter-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 1 320px;
+    animation: orbit-jupiter 14s linear infinite; /* forgás_Nap_körül */
+}
+
+    /* Szaturnusz */
+
+.Szaturnusz {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url(images/szaturnusz-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 1 430px; /* távolság_a_Naptól */
+}
+
+.szaturnusz-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 1 430px;
+    animation: orbit-szaturnusz 18s linear infinite; /* forgás_Nap_körül */
+}
+
+    /* Uránusz */
+
+.Uránusz {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-image: url(images/uránusz-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 1 520px; /* távolság_a_Naptól */
+}
+
+.uranusz-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 1 520px;
+    animation: orbit-uranusz 24s linear infinite; /* forgás_Nap_körül */
+}
+
+    /* Neptunusz */
+
+.Neptunusz {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url(images/neptunusz-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 1 630px; /* távolság_a_Naptól */
+}
+
+.neptunusz-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 1 630px;
+    animation: orbit-neptunusz 28s linear infinite; /* forgás_Nap_körül */
+}
+
+/* Nap_forgása */
+/* Egyhelyben_forog!!! */
 
 @keyframes rotate {
     0% {
-      transform: rotate(0deg);  /* indulás_0dfok */
+      transform: rotate(0deg);  /* indulás_0fok */
     }
     100% {
       transform: rotate(360deg); /* forgás_360fok_ig */
+    }
+  }
+
+/* Merkúr_forgása */
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg) translateX(100px); /* indulás_0fok */
+    }
+    100% {
+        transform: rotate(360deg) translateX(100px); /* forgás_360fok_ig */
+    }
+}
+
+/* Vénusz_forgása */
+
+@keyframes orbit-venusz {
+    0% {
+        transform: rotate(0deg) translateX(150px); /* indulás_0fok */
+    }
+    100% {
+        transform: rotate(360deg) translateX(150px); /* forgás_360fok_ig */
+    }
+}
+
+/* Föld forgása */
+
+@keyframes orbit-fold {
+    0% {
+        transform: rotate(0deg) translate(200px); /* indulás_0fok */
+    }
+    100% {
+        transform: rotate(360deg) translate(200px) /* forgás_360fok_ig */
+    }
+}
+
+/* Hold forgása */
+
+@keyframes orbit-hold {
+    0% {
+        transform: rotate(0deg) translateX(30px); /* indulás_0fok */
+    }
+    100% {
+        transform: rotate(-360deg) translateX(30px); /* forgás_360fok_ig */
+    }
+}
+
+/* Mars forgása */
+
+@keyframes orbit-mars {
+    0% {
+        transform: rotate(0deg) translateX(250px);
+    }
+    100% {
+        transform: rotate(360deg) translateX(250px);
+    }
+}
+
+/* Jupiter forgása */
+
+@keyframes orbit-jupiter {
+    0% {
+        transform: rotate(0deg) translateX(320px);
+    }
+    100% {
+        transform: rotate(360deg) translateX(320px);
+    }
+}
+
+/* Szaturnusz forgása */
+
+@keyframes orbit-szaturnusz {
+    0% {
+        transform: rotate(0deg) translateX(430px);
+    }
+    100% {
+        transform: rotate(360deg) translateX(430px);
+    }
+}
+
+/* Uránusz forgása */
+
+@keyframes orbit-uranusz {
+    0% {
+        transform: rotate(0deg) translateX(520px); /* Starting position */
+    }
+    100% {
+        transform: rotate(360deg) translateX(520px); /* Full rotation */
+    }
+}
+
+/* Neptunusz forgása */
+
+@keyframes orbit-neptunusz {
+    0% {
+      transform: rotate(0deg) translateX(630px);
+    }
+    100% {
+      transform: rotate(360deg) translateX(630px);
     }
   }
