@@ -3,7 +3,7 @@
 Ez az oldal bemutatja egy kis animáció segítségév a bojgókat és tudnivalóikat.
 
 ### 🩻HTML
-Ez a html szerkezet legfőképpen <div> szerkezetből áll amiből egy részletet itt lehet megtekinteni⤵️
+Ez a html szerkezet legfőképpen "div" szerkezetből áll amiből egy részletet itt lehet megtekinteni⤵️
 
 ```html
 <!DOCTYPE html>
