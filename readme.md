@@ -46,3 +46,6 @@ Ez a html szerkezet legfőképpen "div" szerkezetből áll amiből egy részlete
                 </div>
             </div>
         </div>
+```
+#### Css
+külömböző animációk jellenek meg amit a weblap megnyitásával meg is nézhetünk itt: https://eandoctor.github.io/Gergo_Levente_solarsystem/
