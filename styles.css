@@ -1,12 +1,14 @@
 html, body {
     background-image: url("images/background.jpg");
-}
-
-body {
-    font-family:'Times New Roman', Times, serif;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family:'Times New Roman', Times, serif;
     height: 100vh;
     margin: 0;
+    padding: 0;
+    min-height: 160vh;
 }
 
 /* táblázat */
@@ -53,7 +55,7 @@ h1, table {
 
 .nap-container {
     position: absolute;
-    top:50%;
+    top:calc(50% + 80px); /* távolság a tetejátől az oldalnak */
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -73,14 +75,14 @@ h1, table {
     position: absolute;
     top: 0;
     left: 50%;
-    transform-origin:1 100px; /* távolság_a_Naptól */
+    transform-origin:1 80px; /* távolság_a_Naptól */
 }
 
 .merkur-container {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform-origin:1 100px; 
+    transform-origin:1 80px; 
     animation: orbit 4s linear infinite; /* forgás_Nap_körül */
 }
 
@@ -182,7 +184,7 @@ h1, table {
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    background-image: url(images/jupiter-removebg-preview.png);
+    background-image: url(images/jupiter-removebg-preview-removebg-preview.png);
     background-size: cover;
     background-position: center; /* kép_középen_maradása_(ez_a3) */
     position: absolute;
@@ -284,10 +286,10 @@ h1, table {
 
 @keyframes orbit {
     0% {
-        transform: rotate(0deg) translateX(100px); /* indulás_0fok */
+        transform: rotate(0deg) translateX(80px); /* indulás_0fok */
     }
     100% {
-        transform: rotate(360deg) translateX(100px); /* forgás_360fok_ig */
+        transform: rotate(360deg) translateX(80px); /* forgás_360fok_ig */
     }
 }
 
@@ -295,10 +297,10 @@ h1, table {
 
 @keyframes orbit-venusz {
     0% {
-        transform: rotate(0deg) translateX(150px); /* indulás_0fok */
+        transform: rotate(0deg) translateX(120px); /* indulás_0fok */
     }
     100% {
-        transform: rotate(360deg) translateX(150px); /* forgás_360fok_ig */
+        transform: rotate(360deg) translateX(120px); /* forgás_360fok_ig */
     }
 }
 
@@ -306,10 +308,10 @@ h1, table {
 
 @keyframes orbit-fold {
     0% {
-        transform: rotate(0deg) translate(200px); /* indulás_0fok */
+        transform: rotate(0deg) translate(190px); /* indulás_0fok */
     }
     100% {
-        transform: rotate(360deg) translate(200px) /* forgás_360fok_ig */
+        transform: rotate(360deg) translate(190px) /* forgás_360fok_ig */
     }
 }
 
@@ -328,10 +330,10 @@ h1, table {
 
 @keyframes orbit-mars {
     0% {
-        transform: rotate(0deg) translateX(250px);
+        transform: rotate(0deg) translateX(265px);
     }
     100% {
-        transform: rotate(360deg) translateX(250px);
+        transform: rotate(360deg) translateX(265px);
     }
 }
 
@@ -339,10 +341,10 @@ h1, table {
 
 @keyframes orbit-jupiter {
     0% {
-        transform: rotate(0deg) translateX(320px);
+        transform: rotate(0deg) translateX(300px);
     }
     100% {
-        transform: rotate(360deg) translateX(320px);
+        transform: rotate(360deg) translateX(300px);
     }
 }
 
@@ -350,10 +352,10 @@ h1, table {
 
 @keyframes orbit-szaturnusz {
     0% {
-        transform: rotate(0deg) translateX(430px);
+        transform: rotate(0deg) translateX(400px);
     }
     100% {
-        transform: rotate(360deg) translateX(430px);
+        transform: rotate(360deg) translateX(400px);
     }
 }
 
@@ -361,10 +363,10 @@ h1, table {
 
 @keyframes orbit-uranusz {
     0% {
-        transform: rotate(0deg) translateX(520px); /* Starting position */
+        transform: rotate(0deg) translateX(500px); /* Starting position */
     }
     100% {
-        transform: rotate(360deg) translateX(520px); /* Full rotation */
+        transform: rotate(360deg) translateX(500px); /* Full rotation */
     }
 }
 
@@ -372,9 +374,178 @@ h1, table {
 
 @keyframes orbit-neptunusz {
     0% {
-      transform: rotate(0deg) translateX(630px);
+      transform: rotate(0deg) translateX(590px);
     }
     100% {
-      transform: rotate(360deg) translateX(630px);
+      transform: rotate(360deg) translateX(590px);
     }
   }
+
+
+  /* Bolygó leírások */
+
+.bolygo-info {
+    color: white;
+    padding: 1300px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bolygo-leírás {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.bolygo-img {
+    width: 120px;
+    height: auto;
+    margin-right: 30px;
+}
+
+.boylgo-text h3 {
+    margin: 0 0 10px 0;
+}
+
+.bolygo-text p {
+    margin: 0;
+}
+
+
+/* Dekoráció */
+
+/* <h1>-tag  */
+
+.tüzes-felirat {
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+        animation: flameText 1.5s infinite alternate;
+        text-shadow:
+          0 0 5px #00ffff,
+          0 0 10px #00ffcc,
+          0 0 20px #00ff66,
+          0 0 40px #00ccff;
+      }
+
+@keyframes flameText {
+    0% {
+        text-shadow:
+         0 0 5px #00ffff,
+         0 0 10px #00ffcc,
+         0 0 20px #00ff66,
+         0 0 40px #00ccff;
+        }
+    100% {
+        text-shadow:
+        0 0 10px #00ffcc,
+        0 0 20px #00ffff,
+        0 0 30px #00ff66,
+        0 0 50px #00ccff;
+    }
+}
+
+/* <h2>-tag */
+
+h2 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideGlowGray 2s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeSlideGlowGray {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        text-shadow: 0 0 35px rgb(146, 145, 145);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        text-shadow: 0 0 35px rgb(255, 255, 255);
+    }
+}
+
+    
+/* leirás-keret-animáció */
+
+@keyframes glowing {
+        0% {
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+                        0 0 10px rgba(169, 169, 169, 0.3),
+                        0 0 20px rgba(169, 169, 169, 0.5);
+        }
+        50% {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 1),
+                        0 0 20px rgba(169, 169, 169, 0.7),
+                        0 0 30px rgba(169, 169, 169, 1),
+                        0 0 40px rgba(169, 169, 169, 0.9);
+        }
+        100% {
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+                        0 0 10px rgba(169, 169, 169, 0.3),
+                        0 0 20px rgba(169, 169, 169, 0.5);
+        }
+    }
+
+/* halványulás-effect */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* az összes leirás alap design */
+
+.bolygo-leírás {
+    opacity: 0; /* láthatóság-kiindulás */
+    animation: fadeIn 2s ease-in forwards, glowing 4s infinite alternate; 
+}
+
+/* nth-child tag használata különben nem megy a világitás */
+
+.bolygo-leírás:nth-child(1) {
+    animation-delay: 1s, 0s; /* halványulás 1s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(2) {
+    animation-delay: 1.5s, 0s; /* halványulás 1.5s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(3) {
+    animation-delay: 2s, 0s; /* halványulás 2s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(4) {
+    animation-delay: 2.5s, 0s; /* halványulás 2.5s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(5) {
+    animation-delay: 3s, 0s; /* halványulás 3s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(6) {
+    animation-delay: 3.5s, 0s; /* halványulás 3.5s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(7) {
+    animation-delay: 4s, 0s; /* halványulás 4s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(8) {
+    animation-delay: 4.5s, 0s; /* halványulás 4.5s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(9) {
+    animation-delay: 5s, 0s; /* halványulás 5s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(10) {
+    animation-delay: 5.5s, 0s; /* halványulás 5.5s, majd azonnal elkezd világitani */
+}
