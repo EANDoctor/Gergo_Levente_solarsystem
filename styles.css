@@ -1,12 +1,18 @@
-body {
-    background-image: url("images/background.jpg")
-}
-
-body {
+html, body {
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     font-family:'Times New Roman', Times, serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    min-height: 160vh;
 }
 
 /* táblázat */
+
 table, tr, td {
     border: 1px solid rgb(255, 255, 255)
 }
@@ -18,11 +24,528 @@ table {
 }
 
 /* pozíció */
+
 h1 {
     text-align: center;
 }
 
 /* szín */
+
 h1, table {
     color: white;
+}
+
+/* bolygók */
+    
+    /* Nap */
+
+.Nap {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-image: url(images/sun-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+    animation: rotate 30s linear infinite;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+  }
+
+.nap-container {
+    position: absolute;
+    top:calc(50% + 80px); /* távolság a tetejátől az oldalnak */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    /* Merkúr */
+
+.Merkúr {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url(images/merkúr-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin:1 80px; /* távolság_a_Naptól */
+}
+
+.merkur-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin:1 80px; 
+    animation: orbit 4s linear infinite; /* forgás_Nap_körül */
+}
+
+    /* Vénusz */
+
+.Vénusz {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(images/vénusz-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 1 150px; /* távolság_a_Naptól */
+}
+
+.venusz-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin:1 150px;
+    animation: orbit-venusz 6s linear infinite;
+}
+
+    /* Föld */
+
+.Föld {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(images/föld-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 1 200px; /* távolság_a_Naptól */
+}
+
+.fold-conteiner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 1 200px;
+    animation: orbit-fold 8s linear infinite; /* forgás_Nap_körül */
+}
+
+    /* Hold */
+
+.Hold {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-image: url(images/hold-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 1 30px; /* távolság_a_Földtől */
+}
+
+.hold-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 1 30px;
+    animation: orbit-hold 3s linear infinite; /* forgás_Nap_körül */
+}
+
+    /* Mars */
+
+.Mars {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-image: url(images/mars-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 1 250px; /* távolság_a_Naptól */
+}
+
+.mars-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 1 250px;
+    animation: orbit-mars 10s linear infinite; /* forgás_Nap_körül */
+}
+
+    /* Jupiter */
+
+.Jupiter {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-image: url(images/jupiter-removebg-preview-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 1 320px; /* távolság_a_Naptól */
+}
+
+.jupiter-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 1 320px;
+    animation: orbit-jupiter 14s linear infinite; /* forgás_Nap_körül */
+}
+
+    /* Szaturnusz */
+
+.Szaturnusz {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url(images/szaturnusz-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 1 430px; /* távolság_a_Naptól */
+}
+
+.szaturnusz-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 1 430px;
+    animation: orbit-szaturnusz 18s linear infinite; /* forgás_Nap_körül */
+}
+
+    /* Uránusz */
+
+.Uránusz {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-image: url(images/uránusz-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 1 520px; /* távolság_a_Naptól */
+}
+
+.uranusz-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 1 520px;
+    animation: orbit-uranusz 24s linear infinite; /* forgás_Nap_körül */
+}
+
+    /* Neptunusz */
+
+.Neptunusz {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url(images/neptunusz-removebg-preview.png);
+    background-size: cover;
+    background-position: center; /* kép_középen_maradása_(ez_a3) */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 1 630px; /* távolság_a_Naptól */
+}
+
+.neptunusz-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 1 630px;
+    animation: orbit-neptunusz 28s linear infinite; /* forgás_Nap_körül */
+}
+
+/* Nap_forgása */
+/* Egyhelyben_forog!!! */
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);  /* indulás_0fok */
+    }
+    100% {
+      transform: rotate(360deg); /* forgás_360fok_ig */
+    }
+  }
+
+/* Merkúr_forgása */
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg) translateX(80px); /* indulás_0fok */
+    }
+    100% {
+        transform: rotate(360deg) translateX(80px); /* forgás_360fok_ig */
+    }
+}
+
+/* Vénusz_forgása */
+
+@keyframes orbit-venusz {
+    0% {
+        transform: rotate(0deg) translateX(120px); /* indulás_0fok */
+    }
+    100% {
+        transform: rotate(360deg) translateX(120px); /* forgás_360fok_ig */
+    }
+}
+
+/* Föld forgása */
+
+@keyframes orbit-fold {
+    0% {
+        transform: rotate(0deg) translate(190px); /* indulás_0fok */
+    }
+    100% {
+        transform: rotate(360deg) translate(190px) /* forgás_360fok_ig */
+    }
+}
+
+/* Hold forgása */
+
+@keyframes orbit-hold {
+    0% {
+        transform: rotate(0deg) translateX(30px); /* indulás_0fok */
+    }
+    100% {
+        transform: rotate(-360deg) translateX(30px); /* forgás_360fok_ig */
+    }
+}
+
+/* Mars forgása */
+
+@keyframes orbit-mars {
+    0% {
+        transform: rotate(0deg) translateX(265px);
+    }
+    100% {
+        transform: rotate(360deg) translateX(265px);
+    }
+}
+
+/* Jupiter forgása */
+
+@keyframes orbit-jupiter {
+    0% {
+        transform: rotate(0deg) translateX(300px);
+    }
+    100% {
+        transform: rotate(360deg) translateX(300px);
+    }
+}
+
+/* Szaturnusz forgása */
+
+@keyframes orbit-szaturnusz {
+    0% {
+        transform: rotate(0deg) translateX(400px);
+    }
+    100% {
+        transform: rotate(360deg) translateX(400px);
+    }
+}
+
+/* Uránusz forgása */
+
+@keyframes orbit-uranusz {
+    0% {
+        transform: rotate(0deg) translateX(500px); /* Starting position */
+    }
+    100% {
+        transform: rotate(360deg) translateX(500px); /* Full rotation */
+    }
+}
+
+/* Neptunusz forgása */
+
+@keyframes orbit-neptunusz {
+    0% {
+      transform: rotate(0deg) translateX(590px);
+    }
+    100% {
+      transform: rotate(360deg) translateX(590px);
+    }
+  }
+
+
+  /* Bolygó leírások */
+
+.bolygo-info {
+    color: white;
+    padding: 1300px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bolygo-leírás {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.bolygo-img {
+    width: 120px;
+    height: auto;
+    margin-right: 30px;
+}
+
+.boylgo-text h3 {
+    margin: 0 0 10px 0;
+}
+
+.bolygo-text p {
+    margin: 0;
+}
+
+
+/* Dekoráció */
+
+/* <h1>-tag  */
+
+.tüzes-felirat {
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+        animation: flameText 1.5s infinite alternate;
+        text-shadow:
+          0 0 5px #00ffff,
+          0 0 10px #00ffcc,
+          0 0 20px #00ff66,
+          0 0 40px #00ccff;
+      }
+
+@keyframes flameText {
+    0% {
+        text-shadow:
+         0 0 5px #00ffff,
+         0 0 10px #00ffcc,
+         0 0 20px #00ff66,
+         0 0 40px #00ccff;
+        }
+    100% {
+        text-shadow:
+        0 0 10px #00ffcc,
+        0 0 20px #00ffff,
+        0 0 30px #00ff66,
+        0 0 50px #00ccff;
+    }
+}
+
+/* <h2>-tag */
+
+h2 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideGlowGray 2s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeSlideGlowGray {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        text-shadow: 0 0 35px rgb(146, 145, 145);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        text-shadow: 0 0 35px rgb(255, 255, 255);
+    }
+}
+
+    
+/* leirás-keret-animáció */
+
+@keyframes glowing {
+        0% {
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+                        0 0 10px rgba(169, 169, 169, 0.3),
+                        0 0 20px rgba(169, 169, 169, 0.5);
+        }
+        50% {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 1),
+                        0 0 20px rgba(169, 169, 169, 0.7),
+                        0 0 30px rgba(169, 169, 169, 1),
+                        0 0 40px rgba(169, 169, 169, 0.9);
+        }
+        100% {
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+                        0 0 10px rgba(169, 169, 169, 0.3),
+                        0 0 20px rgba(169, 169, 169, 0.5);
+        }
+    }
+
+/* halványulás-effect */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* az összes leirás alap design */
+
+.bolygo-leírás {
+    opacity: 0; /* láthatóság-kiindulás */
+    animation: fadeIn 2s ease-in forwards, glowing 4s infinite alternate; 
+}
+
+/* nth-child tag használata különben nem megy a világitás */
+
+.bolygo-leírás:nth-child(1) {
+    animation-delay: 1s, 0s; /* halványulás 1s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(2) {
+    animation-delay: 1.5s, 0s; /* halványulás 1.5s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(3) {
+    animation-delay: 2s, 0s; /* halványulás 2s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(4) {
+    animation-delay: 2.5s, 0s; /* halványulás 2.5s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(5) {
+    animation-delay: 3s, 0s; /* halványulás 3s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(6) {
+    animation-delay: 3.5s, 0s; /* halványulás 3.5s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(7) {
+    animation-delay: 4s, 0s; /* halványulás 4s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(8) {
+    animation-delay: 4.5s, 0s; /* halványulás 4.5s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(9) {
+    animation-delay: 5s, 0s; /* halványulás 5s, majd azonnal elkezd világitani */
+}
+
+.bolygo-leírás:nth-child(10) {
+    animation-delay: 5.5s, 0s; /* halványulás 5.5s, majd azonnal elkezd világitani */
 }
